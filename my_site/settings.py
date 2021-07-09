@@ -136,6 +136,7 @@ MEDIA_ROOT = BASE_DIR / "uploads"
 
 MEDIA_URL = "/files/"
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Configure Django App for Heroku.
 
 
