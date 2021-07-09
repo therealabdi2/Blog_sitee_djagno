@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import django_heroku
 import os
 from pathlib import Path
 
@@ -135,6 +135,6 @@ MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/files/"
 
 # Configure Django App for Heroku.
-import django_heroku
+
 
 django_heroku.settings(locals())
