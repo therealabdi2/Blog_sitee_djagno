@@ -16,14 +16,14 @@
             <img src="{% static "blog/images/Abdi.jpg" %}" alt="Abdi - The Author of this Blog">
             <h2>Abdi's Blog</h2>
         </header>
-    <p>Hi, I am Abdi and I love to blog about tech</p>
+        <p>Hi, I am Abdi and I love to blog about tech</p>
     </section>
 
     <section id="latest-posts">
         <h2>My latest thoughts</h2>
         <ul>
             {% for post in posts %}
-{#                the include statement has access to this data#}
+                {#                the include statement has access to this data#}
                 {% include "blog/includes/post.html" %}
             {% endfor %}
         </ul>
