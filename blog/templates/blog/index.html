@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    My Blog
+{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock %}
+{% block content %}
+
+
+    <section id="welcome">
+        <header>
+            <img src="{% static "blog/images/Abdi.jpg" %}" alt="Abdi - The Author of this Blog">
+            <h2>Abdi's Blog</h2>
+        </header>
+    <p>Hi, I am Abdi and I love to blog about tech</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My latest thoughts</h2>
+        <ul>
+            {% for post in posts %}
+{#                the include statement has access to this data#}
+                {% include "blog/includes/post.html" %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I do</h2>
+        <p>I love programming and help other and enjoy exploring new tech</p>
+        <p>My Goal is to keep growing and help others do the same</p>
+    </section>
+{% endblock %}
